@@ -1,0 +1,20 @@
+[api]
+    enabled = false
+    address = "0.0.0.0:8686"
+    playground = true
+
+[log_schema]
+    host_key = "host"
+    message_key = "message"
+    source_type_key = "source_type"
+    timestamp_key = "ts"
+
+[sources.http_server]
+    type = "http_server"
+    address = "0.0.0.0:80"
+    encoding = "text"
+
+[sinks.console]
+    type = "console"
+    inputs = [ "http_server" ]
+    encoding.codec = "json"

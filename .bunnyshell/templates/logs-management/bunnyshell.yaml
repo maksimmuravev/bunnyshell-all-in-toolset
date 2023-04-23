@@ -1,0 +1,39 @@
+kind: Environment
+name: logs-management
+type: primary
+components:
+    -
+        kind: Service
+        name: grafana
+        dockerCompose:
+            environment:
+                GF_AUTH_ANONYMOUS_ENABLED: True
+                GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
+            image: "docker.io/grafana/grafana:main"
+            ports:
+                - '3000:3000'
+        hosts:
+            -
+                hostname: 'grafana-{{ env.base_domain }}'
+                path: /
+                servicePort: 3000
+    -
+        kind: Service
+        name: vector
+        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        gitBranch: main
+        gitApplicationPath: components/vector
+        dockerCompose:
+            build:
+                context: ./components/vector
+                dockerfile: .docker/Dockerfile
+                target: dev
+            environment:
+                VECTOR_INTERNAL_LOG_RATE_LIMIT: "0"
+            ports:
+                - '80:80'
+        hosts:
+            -
+                hostname: 'vector-{{ env.base_domain }}'
+                path: /
+                servicePort: 80
