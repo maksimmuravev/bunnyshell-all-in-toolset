@@ -5,6 +5,9 @@ components:
     -
         kind: Service
         name: grafana
+        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        gitBranch: main
+        gitApplicationPath: components/vector
         dockerCompose:
             build:
                 context: ./components/grafana
