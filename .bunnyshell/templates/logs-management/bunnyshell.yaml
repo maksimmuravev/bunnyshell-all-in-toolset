@@ -37,6 +37,7 @@ components:
                 target: dev
             environment:
                 VECTOR_INTERNAL_LOG_RATE_LIMIT: "0"
+                GF_LOKI_URL: "https://{{ components.loki.ingress.hosts[0] }}"
             ports:
                 - '80:80'
         hosts:

@@ -18,3 +18,13 @@
     type = "console"
     inputs = [ "http_server" ]
     encoding.codec = "json"
+
+[sinks.loki]
+    endpoint = "https://${GF_LOKI_URL}:3100"
+    encoding.codec = "json"
+    encoding.timestamp_format = "rfc3339"
+    inputs = ["http_server"]
+    type = "loki"
+    [sinks.loki.labels]
+    loki = "local"
+{{- end }}
