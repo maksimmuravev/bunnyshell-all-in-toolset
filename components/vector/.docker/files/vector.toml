@@ -27,4 +27,3 @@
     type = "loki"
     [sinks.loki.labels]
     loki = "local"
-{{- end }}
