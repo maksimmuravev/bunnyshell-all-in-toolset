@@ -3,22 +3,12 @@ import logging
 import logging.handlers
 import random
 
-vector_host = 'vector-4cp6ed.bunnyenv.com:80'
+vector_host = 'vector-mwccod.bunnyenv.com'
 vector_url = '/'
-handler = logging.handlers.HTTPHandler(vector_host, vector_url, method='POST')
+handler = logging.handlers.HTTPHandler(vector_host, vector_url, method='POST', secure=True)
 
-logger = logging.getLogger('example')
-logger.addHandler(handler)
-logger.setLevel(logging.INFO)
+logging.basicConfig(level=logging.INFO, handlers=[handler])
+
 while True:
-    messages = ['Error', 'Warning', 'Info']
-    message = random.choice(messages)
-    if message == 'Error':
-        logger.error('This is an error log')
-    elif message == 'Warning':
-        logger.warning('This is a warning log')
-    else:
-        logger.info('This is an info log')
-    time.sleep(3)
-    print("next iteration")
-
+    logging.info(f'This is a random log message: {random.randint(1, 100)}')
+    time.sleep(1)

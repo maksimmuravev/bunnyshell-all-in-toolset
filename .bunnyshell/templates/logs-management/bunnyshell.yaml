@@ -6,10 +6,14 @@ components:
         kind: Service
         name: grafana
         dockerCompose:
+            build:
+                context: ./components/grafana
+                dockerfile: .docker/Dockerfile
+                target: dev
             environment:
+                GF_LOKI_URL: "https://{{ components.loki.ingress.hosts[0] }}"
                 GF_AUTH_ANONYMOUS_ENABLED: True
                 GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
-            image: "docker.io/grafana/grafana:main"
             ports:
                 - '3000:3000'
         hosts:
@@ -37,3 +41,16 @@ components:
                 hostname: 'vector-{{ env.base_domain }}'
                 path: /
                 servicePort: 80
+    -
+        kind: Service
+        name: loki
+        dockerCompose:
+            image: "docker.io/grafana/loki:2.8.1"
+            ports:
+                - '3100:3100'
+        hosts:
+            -
+                hostname: 'loki-{{ env.base_domain }}'
+                path: /
+                servicePort: 3100
+
