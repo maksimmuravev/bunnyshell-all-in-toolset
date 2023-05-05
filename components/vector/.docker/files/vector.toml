@@ -19,6 +19,11 @@
     inputs = [ "http_server" ]
     encoding.codec = "json"
 
+[transforms.parse_message]
+    inputs = ["http_server"]
+    type = "remap"
+    source = ". = parse_key_value!(.message, field_delimiter='&')"
+
 [sinks.loki]
     endpoint = "https://${GF_LOKI_URL}"
     encoding.codec = "json"
@@ -26,4 +31,4 @@
     inputs = ["http_server"]
     type = "loki"
     [sinks.loki.labels]
-    loki = "local"
+    env = "dev"
