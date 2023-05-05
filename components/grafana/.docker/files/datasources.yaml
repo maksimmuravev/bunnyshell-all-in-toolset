@@ -3,4 +3,4 @@ datasources:
 - name: Loki
   isDefault: true
   type: loki
-  url: http://${GF_LOKI_URL}:3100
+  url: https://${GF_LOKI_URL}

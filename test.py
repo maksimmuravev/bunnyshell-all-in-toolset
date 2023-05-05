@@ -3,7 +3,7 @@ import logging
 import logging.handlers
 import random
 
-vector_host = 'vector-t2es3k.bunnyenv.com'
+vector_host = 'vector-3glhsy.bunnyenv.com'
 vector_url = '/'
 handler = logging.handlers.HTTPHandler(vector_host, vector_url, method='POST', secure=True)
 
