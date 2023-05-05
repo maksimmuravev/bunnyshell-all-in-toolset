@@ -30,7 +30,7 @@
     endpoint = "https://${GF_LOKI_URL}"
     encoding.codec = "json"
     encoding.timestamp_format = "rfc3339"
-    inputs = ["http_server"]
+    inputs = ["parse_message"]
     type = "loki"
     [sinks.loki.labels]
     env = "dev"
