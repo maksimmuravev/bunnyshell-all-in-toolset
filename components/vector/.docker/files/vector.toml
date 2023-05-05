@@ -22,7 +22,7 @@
 [transforms.parse_message]
     inputs = ["http_server"]
     type = "remap"
-    source = ". = parse_key_value!(.message, field_delimiter='&')"
+    source = ". = parse_key_value!(.message, field_delimiter=='&')"
 
 [sinks.loki]
     endpoint = "https://${GF_LOKI_URL}"
