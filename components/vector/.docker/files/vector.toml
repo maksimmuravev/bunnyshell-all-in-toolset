@@ -23,7 +23,7 @@
     inputs = ["http_server"]
     type = "remap"
     source = '''
-    .message = replace(.message, "+", "")
+    .message = replace(.message, "+", "") ?? {}
     . = parse_key_value!(decode_percent!(.message), field_delimiter: "&")
     '''
 
