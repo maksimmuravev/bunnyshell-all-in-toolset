@@ -23,7 +23,7 @@
     inputs = ["http_server"]
     type = "remap"
     source = '''
-    . = parse_key_value!(.message, field_delimiter: "&")
+    . = decode_percent(parse_key_value!(.message, field_delimiter: "&"))
     '''
 
 [sinks.loki]
