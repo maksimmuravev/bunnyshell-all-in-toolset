@@ -35,3 +35,10 @@ components:
                 target: dev
             environment:
                 JAEGER_COLLECTOR_URL: "{{ components.jaeger.ingress.hosts[1] }}"
+            ports:
+              - '4317:4317'
+        hosts:
+            -
+                hostname: 'opentelemetry-{{ env.base_domain }}'
+                path: /
+                servicePort: 4317
