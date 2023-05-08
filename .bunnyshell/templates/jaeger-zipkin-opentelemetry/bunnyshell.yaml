@@ -6,7 +6,7 @@ components:
         kind: Service
         name: jaeger
         dockerCompose:
-            image: "docker.io/jaegertracing/all-in-one:1.25"
+            image: "docker.io/jaegertracing/all-in-one:1.45"
             environment:
               SPAN_STORAGE_TYPE: badger
               BADGER_EPHEMERAL: "true"
@@ -22,3 +22,16 @@ components:
                 hostname: 'jaeger-collector-{{ env.base_domain }}'
                 path: /
                 servicePort: 14250
+    -
+        kind: Service
+        name: opentelemetry
+        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        gitBranch: main
+        gitApplicationPath: components/opentelemetry
+        dockerCompose:
+            build:
+                context: ./components/opentelemetry
+                dockerfile: .docker/Dockerfile
+                target: dev
+            environment:
+                JAEGER_COLLECTOR_URL: "{{ components.jaeger.ingress.hosts[1] }}"
