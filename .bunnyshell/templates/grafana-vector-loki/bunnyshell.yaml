@@ -1,5 +1,5 @@
 kind: Environment
-name: logs-management
+name: grafana-vector-loki
 type: primary
 components:
     -
