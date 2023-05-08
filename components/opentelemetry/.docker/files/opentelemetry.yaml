@@ -8,7 +8,7 @@ exporters:
   #   endpoint: "http://zipkin:9411/api/v2/spans"
   #   format: proto
   jaeger:
-    endpoint: ${JAEGER_COLLECTOR_URL}:443
+    endpoint: https://${JAEGER_COLLECTOR_URL}/api/traces
 processors:
   batch:
 extensions:

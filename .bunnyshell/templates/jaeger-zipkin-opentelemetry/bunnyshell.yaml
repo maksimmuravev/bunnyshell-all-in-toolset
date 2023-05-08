@@ -10,9 +10,10 @@ components:
             environment:
               SPAN_STORAGE_TYPE: badger
               BADGER_EPHEMERAL: "true"
+              COLLECTOR_OTLP_ENABLED: "true"
             ports:
               - '16686:16686'
-              - '14250:14250'
+              - '14268:14268'
         hosts:
             -
                 hostname: 'jaeger-ui-{{ env.base_domain }}'
@@ -21,7 +22,7 @@ components:
             -
                 hostname: 'jaeger-collector-{{ env.base_domain }}'
                 path: /
-                servicePort: 14250
+                servicePort: 14268
     -
         kind: Service
         name: opentelemetry
