@@ -15,10 +15,10 @@ components:
               - '14250:14250'
         hosts:
             -
-                hostname: 'jaeger-{{ env.base_domain }}'
+                hostname: 'jaeger-ui-{{ env.base_domain }}'
                 path: /
                 servicePort: 16686
             -
-                hostname: 'jaeger-{{ env.base_domain }}'
+                hostname: 'jaeger-collector-{{ env.base_domain }}'
                 path: /
                 servicePort: 14250
