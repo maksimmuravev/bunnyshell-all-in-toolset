@@ -6,7 +6,7 @@ components:
         kind: Service
         name: jaeger
         dockerCompose:
-            image: "docker.io/jaegertracing/all-in-one:1.45"
+            image: "docker.io/jaegertracing/all-in-one:1.25"
             environment:
               SPAN_STORAGE_TYPE: badger
               BADGER_EPHEMERAL: "true"
