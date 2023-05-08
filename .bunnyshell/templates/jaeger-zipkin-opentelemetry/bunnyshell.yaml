@@ -41,4 +41,4 @@ components:
             -
                 hostname: 'opentelemetry-{{ env.base_domain }}'
                 path: /
-                servicePort: 4317
+                servicePort: 4318
