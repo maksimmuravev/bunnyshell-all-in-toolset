@@ -24,4 +24,4 @@ service:
       receivers: [otlp]
       processors: [batch]
       # exporters: [zipkin, jaeger]
-      exporters: [jaeger]
+      exporters: [otlphttp]
