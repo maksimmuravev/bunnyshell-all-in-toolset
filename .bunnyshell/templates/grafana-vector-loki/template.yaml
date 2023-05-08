@@ -1,2 +1,2 @@
-name: toolset
+name: "Log management tools: Grafana + Vector + Loki"
 discoverable: true
