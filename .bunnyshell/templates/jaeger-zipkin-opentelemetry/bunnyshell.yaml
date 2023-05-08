@@ -13,7 +13,7 @@ components:
               COLLECTOR_OTLP_ENABLED: "true"
             ports:
               - '16686:16686'
-              - '14268:14268'
+              - '4318:4318'
         hosts:
             -
                 hostname: 'jaeger-ui-{{ env.base_domain }}'
@@ -22,7 +22,7 @@ components:
             -
                 hostname: 'jaeger-collector-{{ env.base_domain }}'
                 path: /
-                servicePort: 14268
+                servicePort: 4318
     -
         kind: Service
         name: opentelemetry
