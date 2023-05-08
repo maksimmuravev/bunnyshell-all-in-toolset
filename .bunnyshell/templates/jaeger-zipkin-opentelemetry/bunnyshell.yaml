@@ -36,7 +36,7 @@ components:
             environment:
                 JAEGER_COLLECTOR_URL: "{{ components.jaeger.ingress.hosts[1] }}"
             ports:
-              - '4317:4317'
+              - '4318:4318'
         hosts:
             -
                 hostname: 'opentelemetry-{{ env.base_domain }}'

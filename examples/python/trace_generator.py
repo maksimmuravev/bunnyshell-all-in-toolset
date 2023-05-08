@@ -13,7 +13,7 @@ resource = Resource(attributes={
 trace.set_tracer_provider(TracerProvider(resource=resource))
 tracer = trace.get_tracer(__name__)
 
-otlp_exporter = OTLPSpanExporter(endpoint="https://opentelemetry-2xp5si.bunnyenv.com")
+otlp_exporter = OTLPSpanExporter(endpoint="https://opentelemetry-lvpzje.bunnyenv.com")
 
 span_processor = BatchSpanProcessor(otlp_exporter)
 
