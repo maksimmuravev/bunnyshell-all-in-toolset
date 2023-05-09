@@ -1,23 +1,32 @@
 from opentelemetry import trace
-from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
-from opentelemetry.sdk.resources import Resource
+from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
+from opentelemetry.sdk.resources import SERVICE_NAME, Resource
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
+from flask import Flask
 
-# Resource can be required for some backends, e.g. Jaeger
-# If resource wouldn't be set - traces wouldn't appears in Jaeger
+# Service name is required for most backends
 resource = Resource(attributes={
-    "service.name": "service"
+    SERVICE_NAME: "your-service-name"
 })
 
-trace.set_tracer_provider(TracerProvider(resource=resource))
+provider = TracerProvider(resource=resource)
+processor = BatchSpanProcessor(OTLPSpanExporter(endpoint="https://opentelemetry-lesprx.bunnyenv.com/v1/traces"))
+provider.add_span_processor(processor)
+trace.set_tracer_provider(provider)
 tracer = trace.get_tracer(__name__)
 
-otlp_exporter = OTLPSpanExporter(endpoint="opentelemetry-3q3nca.bunnyenv.com")
+app = Flask(__name__)
 
-span_processor = BatchSpanProcessor(otlp_exporter)
+@app.route('/')
+def index():
+    with tracer.start_as_current_span('index'):
+        return 'Hello, world!'
 
-trace.get_tracer_provider().add_span_processor(span_processor)
+@app.route('/hello')
+def hello():
+    with tracer.start_as_current_span('hello'):
+        return 'Hello, Flask!'
 
-with tracer.start_as_current_span("foo"):
-    print("Hello world!")
+if __name__ == '__main__':
+    app.run(debug=True)

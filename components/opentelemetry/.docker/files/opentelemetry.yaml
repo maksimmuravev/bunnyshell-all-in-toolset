@@ -4,11 +4,11 @@ receivers:
       http:
         endpoint: "0.0.0.0:4318"
 exporters:
-  # zipkin:
-  #   endpoint: "http://zipkin:9411/api/v2/spans"
-  #   format: proto
+  zipkin:
+    endpoint: "https://${ZIPKIN_COLLECTOR_URL}:443/api/v2/spans"
+    format: proto
   otlphttp:
-    endpoint: https://${JAEGER_COLLECTOR_URL}:443
+    endpoint: "https://${JAEGER_COLLECTOR_URL}:443"
 processors:
   batch:
 extensions:
@@ -23,5 +23,4 @@ service:
     traces:
       receivers: [otlp]
       processors: [batch]
-      # exporters: [zipkin, jaeger]
-      exporters: [otlphttp]
+      exporters: [zipkin, otlphttp]

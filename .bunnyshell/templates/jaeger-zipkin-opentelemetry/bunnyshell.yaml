@@ -1,7 +1,21 @@
 kind: Environment
-name: jaeger-opentelemetry
+name: jaeger-zipking-opentelemetry
 type: primary
 components:
+    -
+        kind: Service
+        name: zipkin
+        dockerCompose:
+            image: "docker.io/openzipkin/zipkin:2.24"
+            environment:
+              STORAGE_TYPE: mem
+            ports:
+              - '9411:9411'
+        hosts:
+            -
+                hostname: 'zipkin-ui-{{ env.base_domain }}'
+                path: /
+                servicePort: 9411
     -
         kind: Service
         name: jaeger
@@ -36,6 +50,7 @@ components:
                 target: dev
             environment:
                 JAEGER_COLLECTOR_URL: "{{ components.jaeger.ingress.hosts[1] }}"
+                ZIPKIN_COLLECTOR_URL: "{{ components.zipkin.ingress.hosts[0] }}"
             ports:
               - '4318:4318'
         hosts:
