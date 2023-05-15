@@ -1,0 +1,27 @@
+kind: Environment
+name: sentry
+type: primary
+components:
+    -
+        kind: Service
+        name: docker
+        volumes:
+          -
+            name: sentry_volume
+            mount: /opt/sentry
+        dockerCompose:
+            image: "docker:20.10.17-dind-alpine3.16"
+            volumes: sentry_volume
+            ports:
+              - '9000:9000'
+        hosts:
+            -
+                hostname: 'sentry-{{ env.base_domain }}'
+                path: /
+                servicePort: 9000
+
+volumes:
+  -
+    name: sentry_volume
+    type: disk
+    size: 10Gi
