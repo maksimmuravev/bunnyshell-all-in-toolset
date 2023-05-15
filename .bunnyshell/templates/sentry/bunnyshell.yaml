@@ -11,6 +11,8 @@ components:
             mount: /opt/sentry
         dockerCompose:
             image: "docker:20.10.17-dind-alpine3.16"
+            volumes:
+              - sentry-volume
             ports:
               - '9000:9000'
         hosts:
