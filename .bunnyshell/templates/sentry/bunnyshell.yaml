@@ -1,27 +1,15 @@
-kind: Environment
-name: sentry
-type: primary
-components:
     -
-        kind: Service
-        name: docker
-        volumes:
-          -
-            name: sentry-volume
-            mount: /opt/sentry
-        dockerCompose:
-            image: "docker:20.10.3-dind-rootless"
-            volumes:
-              - sentry-volume
-            ports:
-              - '9000:9000'
-        hosts:
-            -
-                hostname: 'sentry-{{ env.base_domain }}'
-                path: /
-                servicePort: 9000
-volumes:
-  -
-    name: sentry-volume
-    type: disk
-    size: 10Gi
+        kind: Helm
+        name: my-app-release
+        runnerImage: 'dtzar/helm-kubectl:3.8.2'
+        deploy:
+            - 'helm upgrade --install --namespace {{ env.k8s.namespace }} --dependency-update --post-renderer /bns/helpers/helm/add_labels/kustomize -f values.yaml my-app-{{ env.unique }} .'
+        destroy:
+            - 'helm uninstall my-app-{{ env.unique }} --namespace {{ env.k8s.namespace }}'
+        start:
+            - 'helm upgrade --namespace {{ env.k8s.namespace }} --post-renderer /bns/helpers/helm/add_labels/kustomize --reuse-values --set replicas=1 my-app-{{ env.unique }} .'
+        stop:
+            - 'helm upgrade --namespace {{ env.k8s.namespace }} --post-renderer /bns/helpers/helm/add_labels/kustomize --reuse-values --set replicas=0 my-app-{{ env.unique }} .'
+        gitRepo: 'https://github.com/sentry-kubernetes/charts.git'
+        gitBranch: develop
+        gitApplicationPath: /sentry
