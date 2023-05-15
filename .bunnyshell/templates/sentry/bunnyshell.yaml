@@ -16,4 +16,4 @@ components:
           - 'helm upgrade --namespace {{ env.k8s.namespace }} --post-renderer /bns/helpers/helm/add_labels/kustomize --reuse-values --set replicas=0 my-app-{{ env.unique }} .'
       gitRepo: 'https://github.com/sentry-kubernetes/charts.git'
       gitBranch: develop
-      gitApplicationPath: /sentry
+      gitApplicationPath: /
