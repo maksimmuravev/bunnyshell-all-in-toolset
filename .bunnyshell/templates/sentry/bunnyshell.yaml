@@ -13,14 +13,14 @@ components:
                 context: ./components/sentry
                 dockerfile: .docker/Dockerfile
                 target: dev
-            deploy:
-              resources:
-                limits:
-                  cpus: '1'
-                  memory: 2000M
-                reservations:
-                  cpus: '1'
-                  memory: 2000M
+            # deploy:
+            #   resources:
+            #     limits:
+            #       cpus: '1'
+            #       memory: 2000M
+            #     reservations:
+            #       cpus: '1'
+            #       memory: 2000M
             environment:
                 SENTRY_POSTGRES_HOST: postgres
                 SENTRY_DB_USER: sentry
@@ -41,7 +41,7 @@ components:
                 POSTGRES_DB: sentry
                 POSTGRES_PASSWORD: sentry
                 POSTGRES_USER: sentry
-            image: postgres:9.6-alpine3.15
+            image: docker.io/halloumee/postgres-sentry-migirated:9.6-alpine3.15
             ports:
                 - '5432:5432'
     -
