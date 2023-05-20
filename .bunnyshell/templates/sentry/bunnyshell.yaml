@@ -33,7 +33,7 @@ components:
                 POSTGRES_DB: sentry
                 POSTGRES_PASSWORD: sentry
                 POSTGRES_USER: sentry
-            image: postgres:9.6.24-bullseye
+            image: 11.20-alpine3.18
             ports:
                 - '5432:5432'
     -
