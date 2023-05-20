@@ -3,17 +3,20 @@ name: sentry
 type: primary
 components:
     -
-      kind: Helm
-      name: my-app-release
-      runnerImage: 'dtzar/helm-kubectl:3.8.2'
-      deploy:
-          - 'helm repo add sentry https://sentry-kubernetes.github.io/charts'
-          - 'helm upgrade --install --namespace {{ env.k8s.namespace }} --dependency-update --post-renderer /bns/helpers/helm/add_labels/kustomize -f values.yaml my-app-{{ env.unique }} sentry/sentry'
-      destroy:
-          - 'helm uninstall my-app-{{ env.unique }} --namespace {{ env.k8s.namespace }}'
-      start:
-          - 'helm repo add sentry https://sentry-kubernetes.github.io/charts'
-          - 'helm upgrade --namespace {{ env.k8s.namespace }} --post-renderer /bns/helpers/helm/add_labels/kustomize --reuse-values --set replicas=1 my-app-{{ env.unique }} .'
-      stop:
-          - 'helm repo add sentry https://sentry-kubernetes.github.io/charts'
-          - 'helm upgrade --namespace {{ env.k8s.namespace }} --post-renderer /bns/helpers/helm/add_labels/kustomize --reuse-values --set replicas=0 my-app-{{ env.unique }} .'
+        kind: Service
+        name: sentry
+        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        gitBranch: main
+        gitApplicationPath: components/sentry
+        dockerCompose:
+            build:
+                context: ./components/sentry
+                dockerfile: .docker/Dockerfile
+                target: dev
+            ports:
+                - '9000:9000'
+        hosts:
+            -
+                hostname: 'sentry-{{ env.base_domain }}'
+                path: /
+                servicePort: 9000
