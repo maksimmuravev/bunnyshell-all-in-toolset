@@ -17,10 +17,10 @@ components:
               resources:
                 limits:
                   cpus: '1'
-                  memory: 3072M
+                  memory: 2000M
                 reservations:
                   cpus: '1'
-                  memory: 3072M
+                  memory: 2000M
             environment:
                 SENTRY_POSTGRES_HOST: postgres
                 SENTRY_DB_USER: sentry
