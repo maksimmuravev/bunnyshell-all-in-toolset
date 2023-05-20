@@ -16,11 +16,11 @@ components:
             deploy:
               resources:
                 limits:
-                  cpus: '2'
-                  memory: 4096M
+                  cpus: '1'
+                  memory: 3072M
                 reservations:
-                  cpus: '2'
-                  memory: 4096M
+                  cpus: '1'
+                  memory: 3072M
             environment:
                 SENTRY_POSTGRES_HOST: postgres
                 SENTRY_DB_USER: sentry
