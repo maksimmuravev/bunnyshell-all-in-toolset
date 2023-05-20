@@ -13,13 +13,14 @@ components:
                 context: ./components/sentry
                 dockerfile: .docker/Dockerfile
                 target: dev
-            resources:
-              limits:
-                cpus: '2'
-                memory: 4096M
-              reservations:
-                cpus: '2'
-                memory: 4096M
+            deploy:
+              resources:
+                limits:
+                  cpus: '2'
+                  memory: 4096M
+                reservations:
+                  cpus: '2'
+                  memory: 4096M
             environment:
                 SENTRY_POSTGRES_HOST: postgres
                 SENTRY_DB_USER: sentry
