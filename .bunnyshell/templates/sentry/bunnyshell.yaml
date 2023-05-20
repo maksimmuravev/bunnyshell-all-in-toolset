@@ -17,8 +17,9 @@ components:
                 - '9000:9000'
             deploy:
               resources:
-                cpu: 2
-                memory: 4Gi
+                requests:
+                  cpu: 2
+                  memory: 4Gi
         hosts:
             -
                 hostname: 'sentry-{{ env.base_domain }}'
