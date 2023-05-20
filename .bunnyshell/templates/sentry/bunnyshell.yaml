@@ -13,15 +13,33 @@ components:
                 context: ./components/sentry
                 dockerfile: .docker/Dockerfile
                 target: dev
+            environment:
+                SENTRY_POSTGRES_HOST: postgres
+                SENTRY_DB_USER: sentry
+                SENTRY_DB_PASSWORD: sentry
+                SENTRY_REDIS_HOST: redis
             ports:
                 - '9000:9000'
-            deploy:
-              resources:
-                requests:
-                  cpu: 2
-                  memory: 4Gi
         hosts:
             -
                 hostname: 'sentry-{{ env.base_domain }}'
                 path: /
                 servicePort: 9000
+    -
+        kind: Database
+        name: postgres
+        dockerCompose:
+            environment:
+                POSTGRES_DB: sentry
+                POSTGRES_PASSWORD: sentry
+                POSTGRES_USER: sentry
+            image: postgres:9.6.24-bullseye
+            ports:
+                - '5432:5432'
+    -
+        kind: Database
+        name: redis
+        dockerCompose:
+            image: redis:6.2.12-alpine
+            ports:
+              - '6379:6379'
