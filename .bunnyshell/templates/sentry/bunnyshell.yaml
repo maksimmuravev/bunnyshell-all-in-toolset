@@ -7,6 +7,14 @@ components:
         name: sentry
         dockerCompose:
             image: sentry
+            deploy:
+              resources:
+                limits:
+                  cpus: '0.5'
+                  memory: 500M
+                reservations:
+                  cpus: '0.5'
+                  memory: 500M
             environment:
                 SENTRY_POSTGRES_HOST: postgres
                 SENTRY_DB_USER: sentry
