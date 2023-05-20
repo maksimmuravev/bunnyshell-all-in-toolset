@@ -12,10 +12,9 @@ RUN pip install psycopg2-binary==2.8.6
 # Copy the Supervisor configuration file
 COPY .docker/files/supervisor.d /etc/supervisor/conf.d
 
-ENV SENTRY_SECRET_KEY=AmQtco2220reKOzR7mprnmlN1DbfZ0cZ
+ENV SENTRY_SECRET_KEY=rmTyppbBgZiBiHI0D4AoxF1g28wffDjN
 ENV C_FORCE_ROOT=1
 EXPOSE 9000
 
 # Start Supervisor when the container starts
-RUN chmod +x /entrypoint.sh
 CMD ["supervisord", "-n"]

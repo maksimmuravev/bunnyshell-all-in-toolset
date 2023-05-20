@@ -6,7 +6,7 @@ components:
         kind: Service
         name: sentry
         dockerCompose:
-            image: docker.io/halloumee/sentry:9.1.2
+            image: sentry
             environment:
                 SENTRY_POSTGRES_HOST: postgres
                 SENTRY_DB_USER: sentry
@@ -27,7 +27,7 @@ components:
                 POSTGRES_DB: sentry
                 POSTGRES_PASSWORD: sentry
                 POSTGRES_USER: sentry
-            image: docker.io/halloumee/postgres-sentry-migirated:9.6-alpine3.15
+            image: docker.io/halloumee/postgres-sentry-migrated:15
             ports:
                 - '5432:5432'
     -

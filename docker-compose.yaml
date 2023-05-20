@@ -1,20 +1,15 @@
 version: '2'
 
-volumes:
-   pgdb:
-
 services:
   redis:
     image: redis
 
   postgres:
-    image: postgres:9.6-alpine3.15
+    image: "3978b44a8d2f"
     environment:
       POSTGRES_USER: sentry
       POSTGRES_PASSWORD: sentry
       POSTGRES_DB: sentry
-    volumes:
-     - pgdb:/var/lib/postgresql/data
 
   sentry:
     image: sentry
