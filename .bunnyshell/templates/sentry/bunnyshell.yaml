@@ -5,22 +5,8 @@ components:
     -
         kind: Service
         name: sentry
-        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
-        gitBranch: main
-        gitApplicationPath: components/sentry
         dockerCompose:
-            build:
-                context: ./components/sentry
-                dockerfile: .docker/Dockerfile
-                target: dev
-            # deploy:
-            #   resources:
-            #     limits:
-            #       cpus: '1'
-            #       memory: 2000M
-            #     reservations:
-            #       cpus: '1'
-            #       memory: 2000M
+            image: docker.io/halloumee/sentry:9.1.2
             environment:
                 SENTRY_POSTGRES_HOST: postgres
                 SENTRY_DB_USER: sentry
