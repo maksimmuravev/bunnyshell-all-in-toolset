@@ -6,7 +6,10 @@ components:
         kind: Service
         name: sentry
         dockerCompose:
-            image: sentry
+            build:
+                context: ./components/sentry
+                dockerfile: .docker/Dockerfile
+                target: dev
             deploy:
               resources:
                 limits:
