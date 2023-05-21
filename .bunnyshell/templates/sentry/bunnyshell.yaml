@@ -5,6 +5,9 @@ components:
     -
         kind: Service
         name: sentry
+        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        gitBranch: main
+        gitApplicationPath: components/opentelemetry
         dockerCompose:
             build:
                 context: ./components/sentry
