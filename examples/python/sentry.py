@@ -1,4 +1,5 @@
-# This Flask application showcases the utilization of Sentry for error tracking specifically when accessing the root website path ('/'). 
+# This Flask application showcases the utilization of Sentry for error tracking. 
+# Specifically when accessing the root website path ('/'). 
 # When visiting this path, an intentional exception is raised, captured, and sent to Sentry for error tracking and analysis. 
 
 from flask import Flask
