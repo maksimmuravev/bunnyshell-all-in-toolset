@@ -4,9 +4,8 @@ from sentry_sdk.integrations.flask import FlaskIntegration
 
 # Initialize Sentry SDK
 # Examples of DSN is "https://d8490b5b17d24a74baec541d0f2b3df5@sentry-7f3qqz.bunnyenv.com/2"
-# Where 2 is the Sentry project's "PROJECT_ID"
 sentry_sdk.init(
-    dsn="https://d8490b5b17d24a74baec541d0f2b3df5@sentry-7f3qqz.bunnyenv.com/2",
+    dsn="https://<PUBLIC_KEY>@<SENTRY_URL_FROM_BUNNYSHELL_URLS>/<SENTRY_PROJECT_ID>",
     integrations=[FlaskIntegration()]
 )
 
