@@ -7,8 +7,5 @@ The templates in this repository are carefully crafted to provide developers wit
 ### List of Tools
 - **Logging Management**: Grafana + Vector.dev + Loki
 - **Tracing Tools**: Jaeger + Zipking + OpenTelemetry
-
-### Features
-#### Quick Setup
-Each template comes pre-packaged with services and configurations commonly required in development environments. These templates provide a solid foundation for your projects, eliminating the need for manual setup and reducing time spent on configuration.
-
+- **Error Tracking Tools**: Sentry + Redis + PostgreSQL
+- **Monitoring**: Prometheus + Grafana
