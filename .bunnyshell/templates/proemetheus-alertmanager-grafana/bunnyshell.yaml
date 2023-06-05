@@ -22,7 +22,7 @@ components:
             -
                 hostname: 'prometheus-{{ env.base_domain }}'
                 path: /
-                servicePort: 9091
+                servicePort: 9090
     -
         kind: Service
         name: pushgateway
