@@ -1,5 +1,5 @@
 kind: Environment
-name: sentry
+name: sentry-redis-postgresql
 type: primary
 components:
     -

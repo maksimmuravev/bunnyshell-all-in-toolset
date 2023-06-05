@@ -1,0 +1,16 @@
+kind: Environment
+name: prometheus-alertmanager-grafana
+type: primary
+components:
+    -
+        kind: Service
+        name: prometheus
+        dockerCompose:
+            image: "docker.io/prom/prometheus:v2.44.0"
+            ports:
+              - '9090:9090'
+        hosts:
+            -
+                hostname: 'prometheus-{{ env.base_domain }}'
+                path: /
+                servicePort: 9090
