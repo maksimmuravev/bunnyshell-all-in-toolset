@@ -15,8 +15,9 @@ rule_files:
 
 scrape_configs:
   - job_name: 'pushgateway'
+    honor_labels: true
     static_configs:
-      - targets: ['localhost:9091']
+      - targets: ['https://${PUSHGATEWAY_URL}:9091']
 
   - job_name: "prometheus"
     static_configs:

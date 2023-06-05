@@ -10,4 +10,4 @@ gauge_metric = Gauge("hello_world_metric", "Example metric for Hello World", reg
 gauge_metric.set(42)
 
 # Push the metrics to the Prometheus Pushgateway
-push_to_gateway("https://prometheus-6aeh5g.bunnyenv.com/metrics", job="pushgateway", registry=registry)
+push_to_gateway("https://prometheus-cshdie.bunnyenv.com/metrics", job="pushgateway", registry=registry)

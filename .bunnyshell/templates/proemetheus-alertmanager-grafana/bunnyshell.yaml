@@ -9,14 +9,36 @@ components:
         gitBranch: main
         gitApplicationPath: components/prometheus
         dockerCompose:
+            # image: prom/prometheus:v2.44.0
+            environment:
+                PUSHGATEWAY_URL: "{{ components.pushgateway.ingress.hosts[0] }}"
             build:
                 context: ./components/prometheus
                 dockerfile: .docker/Dockerfile
                 target: dev
             ports:
-                - '9091:9091'
+                - '9090:9090'
         hosts:
             -
                 hostname: 'prometheus-{{ env.base_domain }}'
+                path: /
+                servicePort: 9091
+    -
+        kind: Service
+        name: pushgateway
+        # gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        # gitBranch: main
+        # gitApplicationPath: components/prometheus
+        dockerCompose:
+            image: prom/pushgateway:v1.6.0
+            # build:
+            #     context: ./components/prometheus
+            #     dockerfile: .docker/Dockerfile
+            #     target: dev
+            ports:
+                - '9091:9091'
+        hosts:
+            -
+                hostname: 'pushgateway-{{ env.base_domain }}'
                 path: /
                 servicePort: 9091
