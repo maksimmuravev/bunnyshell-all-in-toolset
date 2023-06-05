@@ -15,7 +15,6 @@ components:
                 target: dev
             ports:
                 - '9090:9090'
-        dockerCompose:
         hosts:
             -
                 hostname: 'prometheus-{{ env.base_domain }}'
