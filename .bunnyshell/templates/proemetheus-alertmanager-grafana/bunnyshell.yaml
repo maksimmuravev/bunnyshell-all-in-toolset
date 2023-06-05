@@ -14,9 +14,9 @@ components:
                 dockerfile: .docker/Dockerfile
                 target: dev
             ports:
-                - '9090:9090'
+                - '9091:9091'
         hosts:
             -
                 hostname: 'prometheus-{{ env.base_domain }}'
                 path: /
-                servicePort: 9090
+                servicePort: 9091
