@@ -55,4 +55,3 @@ components:
                 hostname: 'grafana-{{ env.base_domain }}'
                 path: /
                 servicePort: 3000
-    -
