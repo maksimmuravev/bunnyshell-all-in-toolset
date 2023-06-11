@@ -33,12 +33,13 @@ components:
             -
                 hostname: 'pushgateway-{{ env.base_domain }}'
                 path: /
+                servicePort: 9091
     -
         kind: Service
         name: grafana
         gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
         gitBranch: main
-        gitApplicationPath: components/vector
+        gitApplicationPath: components/grafana
         dockerCompose:
             build:
                 context: ./components/grafana
