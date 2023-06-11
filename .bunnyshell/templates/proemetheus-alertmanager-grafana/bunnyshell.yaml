@@ -9,7 +9,6 @@ components:
         gitBranch: main
         gitApplicationPath: components/prometheus
         dockerCompose:
-            # image: prom/prometheus:v2.44.0
             environment:
                 PUSHGATEWAY_URL: "{{ components.pushgateway.ingress.hosts[0] }}"
             build:
@@ -26,19 +25,34 @@ components:
     -
         kind: Service
         name: pushgateway
-        # gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
-        # gitBranch: main
-        # gitApplicationPath: components/prometheus
         dockerCompose:
             image: prom/pushgateway:v1.6.0
-            # build:
-            #     context: ./components/prometheus
-            #     dockerfile: .docker/Dockerfile
-            #     target: dev
             ports:
                 - '9091:9091'
         hosts:
             -
                 hostname: 'pushgateway-{{ env.base_domain }}'
                 path: /
-                servicePort: 9091
+    -
+        kind: Service
+        name: grafana
+        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        gitBranch: main
+        gitApplicationPath: components/vector
+        dockerCompose:
+            build:
+                context: ./components/grafana
+                dockerfile: .docker/Dockerfile.prometheus
+                target: dev
+            environment:
+                GF_PROMETHEUS_URL: "{{ components.prometheus.ingress.hosts[0] }}"
+                GF_AUTH_ANONYMOUS_ENABLED: True
+                GF_AUTH_ANONYMOUS_ORG_ROLE: Admin
+            ports:
+                - '3000:3000'
+        hosts:
+            -
+                hostname: 'grafana-{{ env.base_domain }}'
+                path: /
+                servicePort: 3000
+    -
