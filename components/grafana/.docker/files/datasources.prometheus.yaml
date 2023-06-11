@@ -2,5 +2,5 @@ apiVersion: 1
 datasources:
 - name: Prometheus
   isDefault: true
-  type: Prometheus
+  type: prometheus
   url: https://${GF_PROMETHEUS_URL}
