@@ -9,7 +9,7 @@ The script utilizes the Prometheus monitoring ecosystem, including Prometheus, P
 
 | Language  | Framework | All-In Toolset Part      |
 |-----------|-----------|-------------------------|
-| Bash      | -         | Prometheus+Pushgateway+Grafana |
+| Bash      | -         | Prometheus + Pushgateway + Grafana |
 
 
 ## 🚀 Prerequisites
@@ -26,6 +26,7 @@ To use this script, you'll need the following:
 bash run.sh <process_name>
 ```
 Replace <process_name> with the name or command of the process you want to monitor.
+
 3. The script will retrieve the memory metrics for the specified process and send them to the Pushgateway.
 
 ## 📄 License

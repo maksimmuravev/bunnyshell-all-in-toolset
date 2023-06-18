@@ -9,7 +9,7 @@ The application showcases how to handle user registration requests, perform basi
 
 | Language  | Framework | All-In Toolset Part |
 |-----------|-----------|---------------------|
-| Python    | Flask     | Grafana+Vector+Loki |
+| Python    | Flask     | Grafana + Vector + Loki |
 
 ## 🚀 Prerequisites
 To run this application, you'll need the following:
