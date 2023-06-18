@@ -1,6 +1,6 @@
-# 💥 Grafana+Vector+Loki
+# 💥 Grafana + Vector + Loki
 
-The **Grafana+Vector+Loki** stack is a powerful combination of open-source tools for log management, processing, and visualization. It offers a streamlined solution for collecting, processing, storing, and analyzing logs from various sources.
+The **Grafana + Vector + Loki** stack is a powerful combination of open-source tools for log management, processing, and visualization. It offers a streamlined solution for collecting, processing, storing, and analyzing logs from various sources.
 
 - **Vector**: fast, efficient, reliable
 - **Grafana**: intuitive, customizable, interactive
