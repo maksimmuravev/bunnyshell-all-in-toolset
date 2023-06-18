@@ -31,5 +31,7 @@ The application is configured to send logs to Loki, a powerful log aggregation s
 ## 📄 License
 This project is licensed under the [MIT License](../../LICENSE).
 
+---
+
 🏆 Happy BunnyShelling! 🏆
 
