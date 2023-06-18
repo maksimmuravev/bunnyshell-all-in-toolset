@@ -1,4 +1,8 @@
-# Template Overview
+# Grafana+Vector+Loki
+
+The Grafana + Vector + Loki stack is a powerful combination of open-source tools for log management, processing, and visualization. It offers a streamlined solution for collecting, processing, storing, and analyzing logs from various sources.
+
+## How it works?
 
 ```mermaid
 graph LR
@@ -12,16 +16,16 @@ subgraph App
     A(( ))
 end
 
-subgraph Vector
-    B(( ))
+subgraph "Transformer"
+    B((Vector))
 end
 
-subgraph Loki
-    C(( ))
+subgraph Storage
+    C(( Loki ))
 end
 
-subgraph Grafana
-    D(( ))
+subgraph Visualizer
+    D(( Grafana ))
 end
 
 A -->|Sends logs to| B
