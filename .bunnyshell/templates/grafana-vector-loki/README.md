@@ -39,12 +39,12 @@ D -->|Presents logs to| User
 ```
 
 ## ⚙️  Usage
-See [User Registration App](../../../examples/user_registration_app).
+See [User Registration App](../../../examples/user_registration_app) example.
 
 ## 📄 License
 This project is licensed under the [MIT License](../../LICENSE).
 
 ---
 
-🏆 Happy BunnyShelling! 🏆
+🐇 Happy BunnyShelling! 🌰
 
