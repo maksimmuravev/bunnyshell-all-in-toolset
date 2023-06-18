@@ -8,7 +8,7 @@ The templates in this repository are carefully crafted to provide developers wit
 
 | Purpose                 | List of Tools                           | Template                                             | Example                                  |
 |-------------------------|-----------------------------------------|------------------------------------------------------|------------------------------------------|
-| Logging Management      | Grafana + Vector + Loki                 | [Grafana-Vector-Loki](.bunnyshell/templates/grafana-vector-loki)| [Example](examples/user_registration_app) |
+| Logging Management      | Grafana-Vector-Loki                 | [Grafana-Vector-Loki](.bunnyshell/templates/grafana-vector-loki)| [User Registration App](examples/user_registration_app) |
 | Tracing Tools           | Jaeger + Zipking + OpenTelemetry        | -                                                    | -                                        |
 | Error Tracking Tools    | Sentry + Redis + PostgreSQL             | -                                                    | -                                        |
 | Monitoring              | Prometheus + Grafana                    | -                                                    | -                                        |
