@@ -1,7 +1,7 @@
-# Bash Memory Monitoring Script
+# Process Memory Debugging
 
 ## 📄 Description
-The Bash Memory Monitoring Script is a script example written in Bash that allows you to monitor the memory usage of a specific process. It can be useful for debugging memory leaks and analyzing memory usage patterns.
+The Process Memory Debugging is a script example written in Bash that allows you to monitor the memory usage of a specific process. It can be useful for debugging memory leaks and analyzing memory usage patterns.
 
 The script utilizes the Prometheus monitoring ecosystem, including Prometheus, Pushgateway, and Grafana, to collect, store, and visualize the memory metrics. It retrieves memory information using the `ps` and `vmmap` commands and sends the metrics to the Pushgateway, which can be scraped by Prometheus for monitoring and visualization in Grafana.
 
