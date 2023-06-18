@@ -1,5 +1,5 @@
 kind: Environment
-name: prometheus-alertmanager-grafana
+name: prometheus-grafana
 type: primary
 components:
     -
