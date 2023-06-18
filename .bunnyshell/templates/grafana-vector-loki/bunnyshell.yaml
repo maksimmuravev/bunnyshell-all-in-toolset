@@ -5,7 +5,7 @@ components:
     -
         kind: Service
         name: grafana
-        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        gitRepo: 'https://github.com/maksimmuravev/bunnyshell-all-in-toolset.git'
         gitBranch: main
         gitApplicationPath: components/vector
         dockerCompose:
@@ -27,7 +27,7 @@ components:
     -
         kind: Service
         name: vector
-        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        gitRepo: 'https://github.com/maksimmuravev/bunnyshell-all-in-toolset.git'
         gitBranch: main
         gitApplicationPath: components/vector
         dockerCompose:

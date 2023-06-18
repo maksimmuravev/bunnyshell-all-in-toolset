@@ -40,7 +40,7 @@ components:
     -
         kind: Service
         name: opentelemetry
-        gitRepo: 'https://github.com/maksimmuravev/bunny-shell-template.git'
+        gitRepo: 'https://github.com/maksimmuravev/bunnyshell-all-in-toolset.git'
         gitBranch: main
         gitApplicationPath: components/opentelemetry
         dockerCompose:
