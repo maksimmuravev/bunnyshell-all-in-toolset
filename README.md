@@ -13,3 +13,6 @@ The templates in this repository are carefully crafted to provide developers wit
 | Error Tracking Tools    | Sentry + Redis + PostgreSQL             | -                                        |
 | Monitoring              | [Prometheus + Pushgateway + Grafana](.bunnyshell/templates/prometheus-pushgateway-grafana)                    |  [Process Memory Debugging](examples/process_memory_debugging)                                        |
 
+---
+
+🏆 Happy [BunnyShelling](https://bunnyshell.devpost.com/)! 🚀
