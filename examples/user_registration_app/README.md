@@ -30,5 +30,5 @@ curl -X POST -d "username=johndoe&email=johndoe@example.com" http://localhost:50
 The application is configured to send logs to Loki, a powerful log aggregation system. The logs are sent using the provided logging mechanism in the code, which can be customized based on your Loki setup. Ensure that the `vector_host` and `vector_url` variables in `app.py` are correctly set to match your Loki configuration.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](../../LICENSE).
 
