@@ -1,5 +1,5 @@
 kind: Environment
-name: prometheus-grafana
+name: prometheus-pushgateway-grafana
 type: primary
 components:
     -
