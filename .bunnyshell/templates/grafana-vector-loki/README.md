@@ -6,7 +6,7 @@ The **Grafana+Vector+Loki** stack is a powerful combination of open-source tools
 - **Grafana**: intuitive, customizable, interactive
 - **Loki**: scalable, cost-effective, flexible
 
-## ⚙️ How it works?
+## ⚙️  How it works?
 
 ```mermaid
 graph LR
@@ -21,7 +21,7 @@ subgraph App
 end
 
 subgraph "Transformer"
-    B((Vector))
+    B(( Vector ))
 end
 
 subgraph Storage
@@ -42,9 +42,9 @@ D -->|Presents logs to| User
 See [User Registration App](../../../examples/user_registration_app) example.
 
 ## 📄 License
-This project is licensed under the [MIT License](../../LICENSE).
+This project is licensed under the [MIT License](../../../LICENSE).
 
 ---
 
->🐇 Happy BunnyShelling! 🌰
+🏆 Happy BunnyShelling! 🏆
 
