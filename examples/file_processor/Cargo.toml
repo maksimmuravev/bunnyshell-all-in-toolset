@@ -1,0 +1,9 @@
+[package]
+name = "file_processor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sentry = "0.19.1"
+sentry-types = "0.24.1"
+

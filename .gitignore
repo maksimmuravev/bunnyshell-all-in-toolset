@@ -2,3 +2,8 @@
 .idea/
 .vscode/
 .ruff_cache
+examples/file_processor/debug/
+examples/file_processor/target/
+examples/file_processor/Cargo.lock
+**/*.rs.bk
+*.pdb
