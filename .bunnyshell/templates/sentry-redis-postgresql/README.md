@@ -20,8 +20,12 @@ graph LR
     style D fill:#2196F3,stroke:#333,color:#342,stroke-width:2px;
   end
 
-  A -->|Gets error data from| B
-
+  subgraph App
+    E( )
+    style E fill:#673AB7,stroke:#333,color:#034,stroke-width:2px;
+    E -->|Sends errors to| B
+    A -->|Receives error data and forwards to| B
+  end
 ```
 
 ## 🚀 Project Approach & Potential Roadmap
