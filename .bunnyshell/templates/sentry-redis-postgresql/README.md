@@ -24,7 +24,7 @@ graph LR
     E( )
     style E fill:#673AB7,stroke:#333,color:#034,stroke-width:2px;
     E -->|Sends errors to| B
-    A -->|Receives error data and forwards to| B
+    A -->|Receives error data from| B
   end
 ```
 
