@@ -25,9 +25,9 @@ graph LR
 ```
 
 ## 🚀 Project Approach & Potential Roadmap
-I have intentionally utilized an older version of Sentry (9.1.2) due to its simplicity and minimalistic approach. Although newer versions offer more features, the self-hosted nature of Sentry introduces complexities in the form of a [docker-compose setup](https://github.com/getsentry/self-hosted/blob/master/docker-compose.yml) involving numerous intertwisted services. By opting for a leaner setup, I prioritize resource efficiency while ensuring the quality of error monitoring. This decision aligns with my preference for simplicity and a focus on the balance between efficiency and quality.
+I have deliberately chosen an older version of Sentry (9.1.2) due to its straightforwardness and minimalist approach. Although newer versions offer a wider range of features, the current self-hosted nature of Sentry introduces complexities in the form of a docker-compose setup involving [numerous interconnected services](https://github.com/getsentry/self-hosted/blob/master/docker-compose.yml). By opting for a more streamlined configuration, I prioritize resource efficiency while ensuring the quality of error monitoring. This decision aligns with my preference for simplicity and a focus on finding the right balance between efficiency and quality.
 
-In the future roadmap, there is a possibility to upgrade to the newer version of Sentry. However, given the constraints of the hackathon mode and limited time available, it presents a challenging task to implement the newer version at this stage.
+In the future roadmap, there is a possibility to upgrade to the latest version of Sentry. However, given the constraints of the hackathon mode and the limited time available, implementing the newer version at this stage presents a challenging task.
 
 ## ⚙️  Usage
 See [Process Memory Debugging](../../../examples/file_processor/) script example.
