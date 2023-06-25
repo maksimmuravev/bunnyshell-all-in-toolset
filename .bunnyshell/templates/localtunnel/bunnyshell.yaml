@@ -1,19 +1,17 @@
 kind: Environment
-name: localtunnel
+name: chisel
 type: primary
 components:
     -
         kind: Service
-        name: localtunnel
+        name: chisel
         dockerCompose:
-            image: "defunctzombie/localtunnel-server:latest"
-            command: "--port 3000 --domain $EXTERNAL_DOMAIN --secure"
-            environment:
-                EXTERNAL_DOMAIN: "{{ components.localtunnel.ingress.hosts[0] }}"
+            image: "jpillora/chisel:latest"
+            command: "server"
             ports:
-              - '3000:3000'
+              - '8080:8080'
         hosts:
             -
-                hostname: 'localtunnel-{{ env.base_domain }}'
+                hostname: 'chisel-{{ env.base_domain }}'
                 path: /
-                servicePort: 3000
+                servicePort: 8080
