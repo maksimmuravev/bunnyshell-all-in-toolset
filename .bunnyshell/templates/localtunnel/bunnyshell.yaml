@@ -7,7 +7,7 @@ components:
         name: localtunnel
         dockerCompose:
             image: "defunctzombie/localtunnel-server:latest"
-            command: "--port 3000"
+            command: "--port 3000 --domain localtunnel-{{ env.base_domain }}"
             ports:
               - '3000:3000'
         hosts:
