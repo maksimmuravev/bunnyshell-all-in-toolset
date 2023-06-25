@@ -1,0 +1,17 @@
+kind: Environment
+name: localtunnel
+type: primary
+components:
+    -
+        kind: Service
+        name: localtunnel
+        dockerCompose:
+            image: "defunctzombie/localtunnel-server:latest"
+            command: "--port 3000"
+            ports:
+              - '3000:3000'
+        hosts:
+            -
+                hostname: 'localtunnel-{{ env.base_domain }}'
+                path: /
+                servicePort: 3000
