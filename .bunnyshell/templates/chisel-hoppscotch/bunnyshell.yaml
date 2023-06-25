@@ -1,0 +1,34 @@
+kind: Environment
+name: chisel
+type: primary
+components:
+    -
+        kind: Service
+        name: chisel
+        dockerCompose:
+            image: "jpillora/chisel:1.8"
+            command: "server --reverse"
+            ports:
+              - '8080:8080'
+              - '30000:30000'
+        hosts:
+            -
+                hostname: 'chisel-server-{{ env.base_domain }}'
+                path: /
+                servicePort: 8080
+            -
+                hostname: 'chisel-tunnel-{{ env.base_domain }}'
+                path: /
+                servicePort: 30000
+    -
+        kind: Service
+        name: hoppscotch
+        dockerCompose:
+            image: "hoppscotch/hoppscotch:v3.0.1"
+            ports:
+              - '3000:3000'
+        hosts:
+            -
+                hostname: 'hoppscotch-{{ env.base_domain }}'
+                path: /
+                servicePort: 3000
