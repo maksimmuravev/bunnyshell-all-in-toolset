@@ -10,8 +10,13 @@ components:
             command: "server --reverse"
             ports:
               - '8080:8080'
+              - '30000:30000'
         hosts:
             -
                 hostname: 'chisel-{{ env.base_domain }}'
                 path: /
                 servicePort: 8080
+            -
+                hostname: 'chisel-shared-{{ env.base_domain }}'
+                path: /
+                servicePort: 30000
