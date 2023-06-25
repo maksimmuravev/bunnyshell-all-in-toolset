@@ -1,46 +1,45 @@
 # 💥 Chisel
-The **Prometheus + Pushgateway + Grafana** stack is a robust solution for monitoring, collecting, and visualizing metrics in real-time. This powerful combination of open-source tools enables you to gather, store, and analyze metrics from various sources.
+The Chisel + Hoppscotch stack is a powerful combination for securely exposing local apps to the internet and conducting API testing. This stack leverages the unique capabilities of these two tools to provide a comprehensive solution for developers and testers.
 
-- **Prometheus**: scalable, flexible, powerful
-- **Pushgateway**: intermediary, batch-oriented, ephemeral
-- **Grafana**: intuitive, customizable, interactive
+- **Chisel**: Secure, fast, performant
+- **Hoppscotch**: Developer-friendly, lightweight, PWA-like
 
 ## ⚙️  How it works?
 
+### Sequence Diagram
+
 ```mermaid
-graph LR
+sequenceDiagram
+    participant User
+    participant Localhost
+    participant Chisel_Client
+    participant Chisel_Server
 
-style A fill:#FFX107, stroke:#E65100, stroke-width:2px;
-style P fill:#4CAF50, stroke:#1B5E20, stroke-width:2px;
-style M fill:#2196F3, stroke:#0D47A1, stroke-width:2px;
-style G fill:#9C27B0, stroke:#4A148C, stroke-width:2px;
-style U fill:#607D8B, stroke:#263238, stroke-width:2px;
+    Note over User: Chisel Reverse Tunneling Setup
 
-subgraph App
-    A((App))
-end
+    User->>Chisel_Client: Start Chisel Client
 
-subgraph Metrics Exposer
-    P((Pushgateway))
-end
+    Chisel_Client->>Chisel_Server: Handshake Request
+    Chisel_Server-->>Chisel_Client: Handshake Response
 
-subgraph Metrics Storage
-    M((Prometheus))
-end
+    Note over User: Localhost to Chisel Server
 
-subgraph Visualization
-    G((Grafana))
-end
+    Chisel_Client->>Chisel_Server: Reverse Tunnel Request
+    Chisel_Server-->>Chisel_Client: Reverse Tunnel Established
 
-subgraph User
-    U(( ))
-end
+    Note over User: Exposing Localhost
 
-A -->|Sends metrics to| P
-M -->|Scrapes metrics from| P
-G -->|Requests metrics from| M
-U -->|Shows metrics from| G
-U -->|Shows metrics directly from| M
+    Chisel_Client->>Chisel_Server: Forwarding Connection
+    Chisel_Server-->>Localhost: Connection Established
+
+    Note over User: Accessing Local Service
+
+    User->>Chisel_Server: HTTP Request to Public Endpoint
+    Chisel_Server-->>Chisel_Client: Forwarded Request
+    Chisel_Client-->>Localhost: Forwarded Request
+    Localhost-->>Chisel_Client: Local Service Response
+    Chisel_Client-->>Chisel_Server: Local Service Response
+    Chisel_Server-->>User: Response Received
 ```
 
 ## ⚙️  Usage
