@@ -7,7 +7,7 @@ components:
         name: localtunnel
         dockerCompose:
             image: "defunctzombie/localtunnel-server:latest"
-            command: "--port 3000 --domain localtunnel-{{ env.base_domain }}"
+            command: "--port 3000 --domain {{ components.jaeger.ingress.hosts[1] }} --secure"
             ports:
               - '3000:3000'
         hosts:
