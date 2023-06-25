@@ -7,7 +7,7 @@ components:
         name: chisel
         dockerCompose:
             image: "jpillora/chisel:latest"
-            command: "server"
+            command: "server --reverse"
             ports:
               - '8080:8080'
         hosts:
