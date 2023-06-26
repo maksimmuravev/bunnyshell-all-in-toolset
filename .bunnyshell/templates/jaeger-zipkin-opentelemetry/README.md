@@ -11,31 +11,38 @@ The Jaeger + Zipkin + OpenTelemetry stack is a comprehensive set of open-source 
 ```mermaid
 graph LR
 
-style A fill:#FFC107, stroke:#E65100, stroke-width:2px;
-style B fill:#4CAF50, stroke:#1B5E20, stroke-width:2px;
-style C fill:#2196F3, stroke:#0D47A1, stroke-width:2px;
-style D fill:#9C27B0, stroke:#4A148C, stroke-width:2px;
+style A fill:#FFC107,stroke:#E65100,stroke-width:2px;
+style B fill:#4CAF50,stroke:#1B5E20,stroke-width:2px;
+style C fill:#2196F3,stroke:#0D47A1,stroke-width:2px;
+style D fill:#9C27B0,stroke:#4A148C,stroke-width:2px;
+style Opentelemetry fill:#1C27B0,stroke:#4A148C,stroke-width:2px;
 
 subgraph App
     A(( ))
 end
 
-subgraph "Transformer"
-    B(( Vector ))
+subgraph Jaeger
+    B((Jaeger UI))
+    C((Jaeger Collector))
 end
 
-subgraph Storage
-    C(( Loki ))
+subgraph Zipkin
+    D((Zipkin UI))
 end
 
-subgraph Visualizer
-    D(( Grafana ))
+subgraph TelemetryVisualizingTools
+    Jaeger
+    Zipkin
 end
 
-A -->|Sends logs to| B
-B -->|Sends logs to| C
-D -->|Reads logs from| C
-D -->|Presents logs to| User
+subgraph TelemetryCollector
+    Opentelemetry
+end
+
+A -- Sends OTLP/HTTP traces --> Opentelemetry
+Opentelemetry -- Exports PROTO traces  --> Zipkin
+Opentelemetry -- Exports OTLP/HTTP traces --> C
+C --> B
 ```
 
 ## ⚙️  Usage

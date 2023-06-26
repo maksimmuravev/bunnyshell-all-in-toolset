@@ -11,38 +11,31 @@ The **Grafana + Vector + Loki** stack is a powerful combination of open-source t
 ```mermaid
 graph LR
 
-style App fill:#E6F4F1,stroke:#2980B9,color:black;
-style Jaeger fill:#FDEDD0,stroke:#E89C0C,color:black;
-style Zipkin fill:#FFF3CD,stroke:#E89C0C,color:black;
-style TelemetryCollector fill:#FADBD8,stroke:#E74C3C,color:black;
-style TelemetryVisualizingTools fill:#D6EAF8,stroke:#2980B9,color:black;
+style A fill:#FFC107, stroke:#E65100, stroke-width:2px;
+style B fill:#4CAF50, stroke:#1B5E20, stroke-width:2px;
+style C fill:#2196F3, stroke:#0D47A1, stroke-width:2px;
+style D fill:#9C27B0, stroke:#4A148C, stroke-width:2px;
 
 subgraph App
-    A((App))
+    A(( ))
 end
 
-subgraph Jaeger
-    B((Jaeger UI))
-    C((Jaeger Collector))
+subgraph "Transformer"
+    B(( Vector ))
 end
 
-subgraph Zipkin
-    D((Zipkin UI))
+subgraph Storage
+    C(( Loki ))
 end
 
-subgraph TelemetryVisualizingTools
-    Jaeger
-    Zipkin
+subgraph Visualizer
+    D(( Grafana ))
 end
 
-subgraph TelemetryCollector
-    Opentelemetry
-end
-
-A -- Sends OTLP/HTTP traces --> Opentelemetry
-Opentelemetry -- Exports PROTO traces  --> Zipkin
-Opentelemetry -- Exports OTLP/HTTP traces --> C
-C --> B
+A -->|Sends logs to| B
+B -->|Sends logs to| C
+D -->|Reads logs from| C
+D -->|Presents logs to| User
 ```
 
 ## ⚙️  Usage
