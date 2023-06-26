@@ -6,13 +6,13 @@ const { ExpressInstrumentation } = require('@opentelemetry/instrumentation-expre
 
 const provider = new NodeTracerProvider({
   resource: {
-    server_name: 'example-server'
+    service_name: 'example-server'
   }
 });
 
 // Configure the OTLP HTTP exporter
 const exporter = new OTLPTraceExporter({
-  url: 'https://opentelemetry-tlqebr.bunnyenv.com/v1/traces',
+  url: 'https://opentelemetry-j62w35.bunnyenv.com/v1/traces',
 });
 
 provider.addSpanProcessor(new SimpleSpanProcessor(exporter));
