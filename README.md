@@ -6,7 +6,7 @@ For a decent application development.
 ## Tools Overview
 The templates in this repository are carefully crafted to provide developers with a higher level of abstraction, allowing for faster application creation and efficient deployment. By utilizing these templates, you can bypass the intricacies of infrastructure management and focus on what matters most: coding and building your solid 💪 applications.
 
-| Purpose                 | Tools and Template                               | Example                                  |
+| Purpose                 | Templated Tools                                 | Examples                                 |
 |-------------------------|-------------------------------------------------|------------------------------------------|
 | Logging Management      | [Grafana + Vector + Loki](.bunnyshell/templates/grafana-vector-loki)| [User Registration App](examples/user_registration_app) |
 | Tracing Tools           | Jaeger + Zipking + OpenTelemetry        | -                                        |
