@@ -1,4 +1,4 @@
-# 💥 Chisel
+# 💥 Chisel + Hoppscotch
 The Chisel + Hoppscotch stack is a powerful combination for securely exposing local apps to the internet and conducting API testing. This stack leverages the unique capabilities of these two tools to provide a comprehensive solution for developers and testers.
 
 - **Chisel**: Secure, fast, performant
