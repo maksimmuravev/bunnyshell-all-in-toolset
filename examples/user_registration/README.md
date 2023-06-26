@@ -1,4 +1,4 @@
-# User Registration App
+# User Registration
 
 ## 📄 Description
 The User Registration App is a Python web application example that allows users to register by providing their username and email. It demonstrates a basic user registration process with logging functionality integrated using Grafana+Vector+Loki.

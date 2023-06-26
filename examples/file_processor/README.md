@@ -1,4 +1,4 @@
-# File Processing App
+# File Processing
 
 ## 📄 Description
 The File Processing App is a Rust application example that reads data from a file, processes it, and captures and sends errors to Sentry for error tracking. 
