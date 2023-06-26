@@ -7,7 +7,7 @@ The Fetch Customers App is a Node.js web application example built with Express.
 
 | Language | Framework     | All-In Toolset Part     |
 | -------- | ------------- | ----------------------- |
-| Node.js  | Express       | OpenTelemetry + Jaeger + Zipkin           |
+| Node.js  | Express       | Jaeger + Zipkin + OpenTelemetry           |
 
 ## 🚀 Prerequisites
 To run this application, you'll need the following:
