@@ -30,5 +30,27 @@ This project is licensed under the [MIT License](../../LICENSE).
 
 ---
 
-🏆 Happy [BunnyShelling](https://bunnyshell.devpost.com/)! 🚀
-
+```python
+< 🏆 Happy BunnyShelling 🚀 >
+-----------------------------
+              \
+               \   
+                      .".
+                     /  |
+                    /  /
+                   / ,"
+       .-------.--- /
+      "._ __.-/ o. o\
+         "   (    Y  )
+              )     /
+             /     (
+            /       Y
+        .-"         |
+       /  _     \    \
+      /    `. ". ) /' )
+     Y       )( / /(,/
+    ,|      /     )
+   ( |     /     /
+    " \_  (__   (__        
+        "-._,)--._,)
+```
