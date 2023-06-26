@@ -1,13 +1,13 @@
 # Fetch Customers App
 
 ## 📄 Description
-The Fetch Customers App is a Node.js web application example built with Express. It demonstrates how to use OpenTelemetry for tracing in an Express application. The application fetches customer data from a faked database (actually there is not database – just text) and sends it as a JSON response. The tracing information is exported using the OTLP HTTP Exporter and can be visualized and analyzed using an OpenTelemetry-compatible tools like Jaeger and Zipkin.
+The Fetch Customers App is a Node.js web application example built with Express. It demonstrates how to use OpenTelemetry for tracing in an Express application. The application fetches customer data from a faked database and sends it as a JSON response. The tracing information is exported using the OTLP HTTP Exporter and can be visualized and analyzed using an OpenTelemetry-compatible tools like Jaeger and Zipkin.
 
 ## ⚙️ App Details
 
 | Language | Framework     | All-In Toolset Part     |
 | -------- | ------------- | ----------------------- |
-| Node.js  | Express       | OpenTelemetry           |
+| Node.js  | Express       | OpenTelemetry + Jaeger + Zipkin           |
 
 ## 🚀 Prerequisites
 To run this application, you'll need the following:
