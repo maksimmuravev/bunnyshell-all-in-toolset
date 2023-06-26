@@ -63,7 +63,7 @@ graph LR
 ```
 
 ## ⚙️  Usage
-See [Nginx Demo](../../../examples/nginx_demo/) script example.
+See [Nginx Demo](../../../examples/nginx_demo/) example.
 
 ## 📄 License
 This project is licensed under the [MIT License](../../../LICENSE).

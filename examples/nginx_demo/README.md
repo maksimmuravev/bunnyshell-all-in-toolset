@@ -11,7 +11,7 @@ The Nginx Demo is a simple example that runs a local Nginx demo server and then 
 
 ## 🚀 Prerequisites
 To run this application, you'll need the following:
-- Docker installed in your machine ([Installation Guide](https://docs.docker.com/engine/install/)
+- Docker installed in your machine ([Installation Guide](https://docs.docker.com/engine/install/))
 
 ## 📖 Usage
 1. Expose the Nginx Demo app by running the following command: `docker run -p80:80 -d nginxdemos/hello`

@@ -12,7 +12,7 @@ The templates in this repository are carefully crafted to provide developers wit
 | Tracing Tools           | Jaeger + Zipking + OpenTelemetry        | -                                        |
 | Error Tracking Tools    | Sentry + Redis + PostgreSQL             | -                                        |
 | Monitoring              | [Prometheus + Pushgateway + Grafana](.bunnyshell/templates/prometheus-pushgateway-grafana)                    |  [Process Memory Debugging](examples/process_memory_debugging)                                        |
-| Ingress Tools | [Chisel + Hoppscotch](.bunnyshell/templates/chisel-hoppscotch)                    |  [Process Memory Debugging](examples/process_memory_debugging)                                        |
+| Ingress Tools | [Chisel + Hoppscotch](.bunnyshell/templates/chisel-hoppscotch)                    |  [Nginx Demo](examples/nginx_demo)                                        |
 
 ---
 
