@@ -11,7 +11,7 @@ resource = Resource(attributes={
 })
 
 provider = TracerProvider(resource=resource)
-processor = BatchSpanProcessor(OTLPSpanExporter(endpoint="https://opentelemetry-tlqebr.bunnyenv.com/v1/traces"))
+processor = BatchSpanProcessor(OTLPSpanExporter(endpoint="https://opentelemetry-j62w35.bunnyenv.com/v1/traces"))
 provider.add_span_processor(processor)
 trace.set_tracer_provider(provider)
 tracer = trace.get_tracer(__name__)

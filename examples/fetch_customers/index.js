@@ -6,7 +6,7 @@ const { ExpressInstrumentation } = require('@opentelemetry/instrumentation-expre
 
 const provider = new NodeTracerProvider({
   resource: {
-    service_name: 'example-server'
+    serviceName: 'example-server'
   }
 });
 
