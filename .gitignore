@@ -5,5 +5,8 @@
 examples/file_processor/debug/
 examples/file_processor/target/
 examples/file_processor/Cargo.lock
+examples/fetch_customers/node_modules
+examples/fetch_customers/package-lock.json
 **/*.rs.bk
 *.pdb
+

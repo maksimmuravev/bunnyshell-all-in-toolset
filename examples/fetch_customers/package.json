@@ -1,0 +1,19 @@
+{
+  "name": "open-telemetry-app",
+  "version": "1.0.0",
+  "description": "Real-life business application with OpenTelemetry tracing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@opentelemetry/api": "1.4.1",
+    "@opentelemetry/core": "1.14.0",
+    "@opentelemetry/instrumentation-express": "0.32.4",
+    "@opentelemetry/sdk-trace-node": "1.14.0",
+    "@opentelemetry/sdk-trace-base": "1.14.0",
+    "@opentelemetry/resources": "1.14.0",
+    "@opentelemetry/exporter-trace-otlp-http": "0.40.0",
+    "express": "4.18.2"
+  }
+}

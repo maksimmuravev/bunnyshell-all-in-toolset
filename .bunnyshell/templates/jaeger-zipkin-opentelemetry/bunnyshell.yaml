@@ -49,8 +49,8 @@ components:
                 dockerfile: .docker/Dockerfile
                 target: dev
             environment:
-                JAEGER_COLLECTOR_URL: "{{ components.jaeger.ingress.hosts[1] }}"
-                ZIPKIN_COLLECTOR_URL: "{{ components.zipkin.ingress.hosts[0] }}"
+                JAEGER_COLLECTOR_URL: "jaeger-collector-{{ env.unique }}.bunnyenv.com"
+                ZIPKIN_COLLECTOR_URL: "zipkin-{{ env.unique }}.bunnyenv.com"
             ports:
               - '4318:4318'
         hosts:
