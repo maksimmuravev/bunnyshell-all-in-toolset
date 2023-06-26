@@ -12,7 +12,7 @@ const provider = new NodeTracerProvider({
 
 // Configure the OTLP HTTP exporter
 const exporter = new OTLPTraceExporter({
-  url: 'https://opentelemetry-j62w35.bunnyenv.com/v1/traces',
+  url: 'https://opentelemetry-afdml3.bunnyenv.com/v1/traces',
 });
 
 provider.addSpanProcessor(new SimpleSpanProcessor(exporter));
