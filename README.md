@@ -16,7 +16,7 @@ The templates in this repository are carefully crafted to provide developers wit
 
 ---
 
-```bash
+```zsh
  ________________________
 < 🏆 Happy BunnyShelling! 🚀 >
  ------------------------
