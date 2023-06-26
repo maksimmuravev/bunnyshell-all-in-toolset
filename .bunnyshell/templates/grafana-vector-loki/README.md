@@ -47,7 +47,7 @@ This project is licensed under the [MIT License](../../../LICENSE).
 ---
 
 ```python
-< 🏆 Happy BunnyShelling ❗ >
+< 🏆 Happy BunnyShelling 🚀 >
  ------------------------
               \
                \   
