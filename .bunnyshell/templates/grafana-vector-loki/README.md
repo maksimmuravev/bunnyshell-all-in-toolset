@@ -46,5 +46,24 @@ This project is licensed under the [MIT License](../../../LICENSE).
 
 ---
 
-🏆 Happy [BunnyShelling](https://bunnyshell.devpost.com/)! 🚀
-
+```cobol
+ ________________________
+< 🏆 Happy BunnyShelling! 🚀 >
+ ------------------------
+              \
+               \   
+                     /\    .-" /
+                    /  ; .'  .' 
+                   :   :/  .'   
+                    \  ;-.'     
+       .--""""--..__/     `.    
+     .'           .'    `o  \   
+    /                    `   ;  
+   :                  \      :  
+ .-;        -.         `.__.-'  
+:  ;          \     ,   ;       
+'._:           ;   :   (        
+    \/  .__    ;    \   `-.     
+     ;     "-,/_..--"`-..__)    
+     '""--.._:`
+```

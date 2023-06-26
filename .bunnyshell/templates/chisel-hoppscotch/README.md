@@ -69,6 +69,7 @@ See [Nginx Demo](../../../examples/nginx_demo/) example.
 This project is licensed under the [MIT License](../../../LICENSE).
 
 ---
+
 ```rust
  ________________________
 < 🏆 Happy BunnyShelling! 🚀 >
