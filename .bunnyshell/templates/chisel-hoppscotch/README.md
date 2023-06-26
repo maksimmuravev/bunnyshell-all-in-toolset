@@ -69,5 +69,17 @@ See [Nginx Demo](../../../examples/nginx_demo/) example.
 This project is licensed under the [MIT License](../../../LICENSE).
 
 ---
+```rust
+ ________________________
+< 🏆 Happy BunnyShelling! 🚀 >
+ ------------------------
+              \
+               \   
+               ((`\
+            ___ \\ '--._
+         .'`   `'    o  )
+        /    \   '. __.'
+       _|    /_  \ \_\_
+      {_\______\-'\__\_\
+```
 
-🏆 Happy [BunnyShelling](https://bunnyshell.devpost.com/)! 🚀
