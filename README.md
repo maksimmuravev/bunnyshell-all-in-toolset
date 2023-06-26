@@ -18,7 +18,7 @@ The templates in this repository are carefully crafted to provide developers wit
 
 ```python
 < 🏆 Happy BunnyShelling 🚀 >
- ------------------------
+-----------------------------
   \
    \   
      / \
