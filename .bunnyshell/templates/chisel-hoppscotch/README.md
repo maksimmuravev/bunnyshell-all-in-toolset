@@ -63,7 +63,7 @@ graph LR
 ```
 
 ## ⚙️  Usage
-See [Process Memory Debugging](../../../examples/nginx_demo/) script example.
+See [Nginx Demo](../../../examples/nginx_demo/) script example.
 
 ## 📄 License
 This project is licensed under the [MIT License](../../../LICENSE).
