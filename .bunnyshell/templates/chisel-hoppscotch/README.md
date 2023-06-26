@@ -6,7 +6,7 @@ The Chisel + Hoppscotch stack is a powerful combination for securely exposing lo
 
 ## ⚙️  How it works?
 
-### Sequence Diagram
+Better to illustrate on sequence diagram how it works:
 
 ```mermaid
 sequenceDiagram
