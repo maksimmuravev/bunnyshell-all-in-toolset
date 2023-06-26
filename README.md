@@ -10,7 +10,7 @@ The templates in this repository are carefully crafted to provide developers wit
 |-------------------------|-------------------------------------------------|------------------------------------------|
 | Logging Management      | [Grafana + Vector + Loki](.bunnyshell/templates/grafana-vector-loki)| [User Registration App](examples/user_registration_app) |
 | Tracing Tools           | Jaeger + Zipking + OpenTelemetry        | -                                        |
-| Error Tracking Tools    | [Sentry + Redis + PostgreSQL](.bunnyshell/templates/sentry-redis-postgres)             | [File Processor App](examples/file_processor)                                        |
+| Error Tracking Tools    | [Sentry + Redis + PostgreSQL](.bunnyshell/templates/sentry-redis-postgresql)             | [File Processor App](examples/file_processor)                                        |
 | Monitoring              | [Prometheus + Pushgateway + Grafana](.bunnyshell/templates/prometheus-pushgateway-grafana)                    |  [Process Memory Debugging](examples/process_memory_debugging)                                        |
 | Ingress Tools | [Chisel + Hoppscotch](.bunnyshell/templates/chisel-hoppscotch)                    |  [Nginx Demo](examples/nginx_demo)                                        |
 
