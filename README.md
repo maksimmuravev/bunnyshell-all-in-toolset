@@ -16,4 +16,13 @@ The templates in this repository are carefully crafted to provide developers wit
 
 ---
 
-🏆 Happy [BunnyShelling](https://bunnyshell.devpost.com/)! 🚀
+```
+ ________________________
+< 🏆 Happy BunnyShelling! 🚀 >
+ ------------------------
+  \
+   \   \
+        \ /\
+        ( )
+      .( o ).
+```
