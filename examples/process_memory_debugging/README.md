@@ -34,6 +34,24 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-🏆 Happy [BunnyShelling](https://bunnyshell.devpost.com/)! 🚀
-
-
+```python
+< 🏆 Happy BunnyShelling 🚀 >
+-----------------------------
+          \
+           \   
+   /gg\     \     /gg\ 
+  /g.gg\         /gg.g\ 
+ |gg..gg\       /gg..gg| 
+ |gg...g|       |g...gg| 
+ |gg...g|       |g...gg| 
+  \gg..g/       \g..gg/ 
+   |gg.gvgggggggvg.gg| 
+  /ggggggggggggggggggg\ 
+ /gggg(((ggggggg)))gggg\ 
+|ggggg....ggggg....ggggg| 
+|ggggg....ggggg....ggggg| 
+|ggcccgggg\___/ggggcccgg| 
+|ggcccccgggg|ggggcccccgg| 
+  \gcccggg\---/gggcccg/ 
+     \ggggggggggggg/
+```
