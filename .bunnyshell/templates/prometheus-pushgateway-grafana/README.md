@@ -44,7 +44,7 @@ U -->|Shows metrics directly from| M
 ```
 
 ## ⚙️  Usage
-See [Process Memory Debugging](../../../examples/process_memory_debugging/) script example.
+See [Process Memory Debugging](../../../examples/process_memory_debugging/) example.
 
 ## 📄 License
 This project is licensed under the [MIT License](../../../LICENSE).

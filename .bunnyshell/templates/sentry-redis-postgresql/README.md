@@ -34,7 +34,7 @@ I have deliberately chosen an older version of Sentry (9.1.2) due to its straigh
 In the future roadmap, there is a possibility to upgrade to the latest version of Sentry. However, given the constraints of the hackathon mode and the limited time available, implementing the newer version at this stage presents a challenging task.
 
 ## ⚙️  Usage
-See [File Processor](../../../examples/file_processor/) application example.
+See [File Processor](../../../examples/file_processor/) example.
 
 ## 📄 License
 This project is licensed under the [MIT License](../../../LICENSE).

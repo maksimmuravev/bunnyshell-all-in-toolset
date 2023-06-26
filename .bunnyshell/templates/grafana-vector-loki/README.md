@@ -39,7 +39,7 @@ D -->|Presents logs to| User
 ```
 
 ## ⚙️  Usage
-See [User Registration App](../../../examples/user_registration_app) example.
+See [User Registration](../../../examples/user_registration_app) example.
 
 ## 📄 License
 This project is licensed under the [MIT License](../../../LICENSE).

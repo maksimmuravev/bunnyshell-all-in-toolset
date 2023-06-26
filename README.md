@@ -11,9 +11,9 @@ The templates in this repository are carefully crafted to provide developers wit
 
 | Purpose                 | Templated Tools                                 | Examples                                 |
 |-------------------------|-------------------------------------------------|------------------------------------------|
-| Logging Management      | [Grafana + Vector + Loki](.bunnyshell/templates/grafana-vector-loki)| [User Registration App](examples/user_registration_app) |
-| Tracing Tools           | [Jaeger + Zipking + OpenTelemetry](.bunnyshell/templates/jaeger-zipkin-opentelemetry)        | [Fetch Customers App](examples/fetch_customers)                                        |
-| Error Tracking Tools    | [Sentry + Redis + PostgreSQL](.bunnyshell/templates/sentry-redis-postgresql)             | [File Processor App](examples/file_processor)                                        |
+| Logging Management      | [Grafana + Vector + Loki](.bunnyshell/templates/grafana-vector-loki)| [User Registration](examples/user_registration_app) |
+| Tracing Tools           | [Jaeger + Zipking + OpenTelemetry](.bunnyshell/templates/jaeger-zipkin-opentelemetry)        | [Fetch Customers](examples/fetch_customers)                                        |
+| Error Tracking Tools    | [Sentry + Redis + PostgreSQL](.bunnyshell/templates/sentry-redis-postgresql)             | [File Processor](examples/file_processor)                                        |
 | Monitoring              | [Prometheus + Pushgateway + Grafana](.bunnyshell/templates/prometheus-pushgateway-grafana)                    |  [Process Memory Debugging](examples/process_memory_debugging)                                        |
 | Ingress Tools | [Chisel + Hoppscotch](.bunnyshell/templates/chisel-hoppscotch)                    |  [Nginx Demo](examples/nginx_demo)                                        |
 
