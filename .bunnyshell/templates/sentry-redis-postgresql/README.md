@@ -33,6 +33,13 @@ I have deliberately chosen an older version of Sentry (9.1.2) due to its straigh
 
 In the future roadmap, there is a possibility to upgrade to the latest version of Sentry. However, given the constraints of the hackathon mode and the limited time available, implementing the newer version at this stage presents a challenging task.
 
+## 🔐 Credentials
+The credentials are hardcoded into the database migration script:
+```bash
+admin@admin.local
+admin
+```
+
 ## ⚙️  Usage
 See [File Processor](../../../examples/file_processor/) example.
 

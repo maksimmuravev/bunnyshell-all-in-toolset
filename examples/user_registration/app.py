@@ -6,7 +6,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-vector_host = 'vector-nvjqqj.bunnyenv.com'
+vector_host = 'vector-4ju2m4.bunnyenv.com'
 vector_url = '/'
 handler = logging.handlers.HTTPHandler(vector_host, vector_url, method='POST', secure=True)
 
